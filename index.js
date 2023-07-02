@@ -1,9 +1,24 @@
 function hasTargetSum(array, target) {
-  // Write your algorithm here
-}
+  // Iterate through each element in the array
+  for (let i = 0; i < array.length; i++) {
+    const num1 = array[i];
 
+    // Iterate through the remaining elements
+    for (let j = i + 1; j < array.length; j++) {
+      const num2 = array[j];
+
+      // Check if the pair sums up to the target
+      if (num1 + num2 === target) {
+        return true;
+      }
+    }
+  }
+  // No pair found
+  return false;
+}
+hasTargetSum([3, 8, 12, 4, 11, 7], 10)
 /* 
-  Write the Big O time complexity of your function here
+ Quadratic Time
 */
 
 /* 
